@@ -3,12 +3,14 @@
 	if( $_POST['wachtwoord'] == $_POST['Controle'] ){
 		include ("functies.php");
 		dbconnect();
-		$query = "INSERT INTO Gebruikers(email, wachtwoord) VALUES('".$_POST['email']."','".$_POST['wachtwoord']."')";
+		$mail = strtolower( $_POST['email'] );
+		$query = "INSERT INTO Gebruikers(email, wachtwoord) VALUES('". $mail ."','".$_POST['wachtwoord']."')"; //zet het email en het wachtwoord in de database
 		
-		$result = mysql_query( $query );
+		$result = mysql_query( $query ); 
 		
-		if ($result == false){
+		if ($result == false){ //als er een fout wordt gemaakt, kan je terug gaan naar de registratiepagina
 			echo "Er is iets fout gegaan:" . mysql_error();
+			echo "<a href='Registratiepagina.html'>Klik hier om opnieuw te registreren</a>";
 		} else {
 			echo "Je bent succesvol geregistreerd"
 			echo "<a href='Inlogpagina.html'>Klik hier om in te loggen</a>";
