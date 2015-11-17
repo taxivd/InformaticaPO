@@ -1,5 +1,4 @@
-<?php
-	session_start(); 
+<?php session_start(); 
 	//Kijk of er een email en wachtwoord is ingevoerd
 	if( isSet( $_POST['email'] ) && isSet( $_POST['wachtwoord'] ) ){
 		include ("functies.php"); 
@@ -14,13 +13,30 @@
 			if($numRows == 1){ //kijk of wat je gevonden hebt in de database in één rij staat
 				$_SESSION['login'] = true; //zet de login op true
 				$_SESSION['email'] = $row['email']; //zet het email in de rij
+				echo 'Hallo' . $_SESSION['user'];
 			} else { 
 				$_SESSION['login'] = false; //zet de login op false
 				$_SESSION['email'] = ""; //maak de $_SESSION['email'] leeg
 			}
 		}
-	}else{ //als er niks is ingevuld, moet je terug naar de inlogpagina gaan
-		echo "<a href='Inlogpagina.html'>Vul iets in</a>";
+	}else{ //als er niks is ingevuld, moet de inlogpagina opnieuw te voorschijn komen
+		?>
+		<form method="POST" action="login.php"> <!-- als er op de "verwerk" knop wordt gedrukt, ga je naar data.php -->
+			<fieldset>
+				<legend>Inlog pagina</legend> <!-- Titel van de website -->
+				<ol>
+					<li>
+						<label for="email">Email:</label> <!-- eerste invoerveld -->
+						<input type="text" id="email" required placeholder="Emailadres"/>
+					</li>
+					<li>
+						<label for="wachtwoord">Wachtwoord:</label> <!-- tweede invoerveld -->
+						<input type="password" id="wachtwoord" required placeholder="Wachtwoord"/>
+					</li>
+				</ol>
+				<input class="knop" type="submit" value="Login"/> <!-- Knop om door te gaan naar login.php -->
+		</form>
+		<?php
 	}
 
 	if(isset($_SESSION['login']) && $_SESSION['login'] == true ){
