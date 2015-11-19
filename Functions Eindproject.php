@@ -6,16 +6,16 @@ function registreerDocent( $naam, $afkorting ){
 	$query = "INSERT INTO Docent( naam, afkorting) VALUES('" . $naam . "', " . $afkorting . ");";
 }
 
-function maakVak(){
-
+function maakVak( $vakCode, $vakNaam ){
+	$query = "INSERT INTO Vak( vakCode, vakNaam) VALUES('" . $vakNaam . "', " . $vakCode . ");";
 }
 
-function kenDocentVakToe( $docent, $vak ){
-	
+function kenDocentVakToe( $afkorting, $vak ){
+	$query = "INSERT INTO VakDocent( afkorting, vak) VALUES('" . $afkorting . "', " . $vak . ");";
 }
 
-function createToets( $periode, $soort, $weeknr, $toetsWeek, $duur, $toetsWijze, $lokaalType, $herkansbaar, $RAP, $DTW, $ED, $opmerking ){
-
+function maakToets( $periode, $soort, $weeknr, $toetsWeek, $duur, $toetsWijze, $lokaalType, $herkansbaar, $RAP, $DTW, $ED, $opmerking, $hulpmiddelenSchool, $hulpmiddelenThuis, $aanpasbaar, $docent_id ){
+	$query = "INSERT INTO Toets( periode, soort, weeknr, toetsWeek, duur, toetsWijze, lokaalType, herkansbaar, RAP, DTW. ED, opmerking, hulpmiddelenSchool, hulpmiddelenThuis, aanpasbaar, docent_id) VALUES('" . $periode . "', " . $soort . ", " . $weeknr . " ," . $toetsWeek . ", " . $duur . " ," . $toetsWijze . ", " . $lokaalType . " ," . $herkansbaar . ", " . $RAP . " ," . $DTW . ", " . $ED . " ," . $opmerking . ", " . $hulpmiddelenSchool . " ," . $hulpmiddelenThuis . ", " . $aanpasbaar . " ," . $docent_id . " );";
 }
 
 
