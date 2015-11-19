@@ -1,9 +1,9 @@
 <?php session_start(); 
 	//Kijk of er een leerlingnummer en wachtwoord is ingevoerd
-	if( isSet( $_POST['lln'] ) && isSet( $_POST['wachtwoord'] ) ){
+	if( isSet( $_POST['lln'] ) && isSet( $_POST['Wachtwoord'] ) ){
 		include ("functies.php"); 
 		dbconnect();
-		$query = "SELECT * FROM Gebruiker WHERE leerlingnummer = '" . $_POST['lln'] . "' AND wachtwoord = '" . $_POST['wachtwoord'] . "'"; //Kijk of het leerlingnummer en het wachtwoord in de database staan
+		$query = "SELECT * FROM Gebruiker WHERE leerlingnummer = '" . $_POST['lln'] . "' AND wachtwoord = '" . $_POST['Wachtwoord'] . "'"; //Kijk of het leerlingnummer en het wachtwoord in de database staan
 		$result = mysql_query( $query );
 		
 		if ($result == true){ 
@@ -31,7 +31,7 @@
 						</li>
 						<li>
 							<label class="ww" for="Wachtwoord">Wachtwoord</label> <!-- tweede invoerveld -->
-							<input type="password" id="Wachtwoord" required name="wachtwoord" placeholder="Wachtwoord"/>
+							<input type="password" id="Wachtwoord" required name="Wachtwoord" placeholder="Wachtwoord"/>
 						</li>
 					</ul>
 					<input class="btn" type="submit" value="Login"/> <!-- Knop om door te gaan naar login.php -->
