@@ -1,10 +1,10 @@
 <?php
 	//Kijk of het wachtwoord en het controle wachtwoord hetzelfde zijn
-	if( $_POST['wachtwoord'] == $_POST['Controle'] && ){
+	if( $_POST['wachtwoord'] == $_POST['Controle']){
 		include ("functies.php"); //maak verbinding met de database
 		dbconnect();
 		
-		$query = "INSERT INTO Gebruikers(leerlingnummer, wachtwoord) VALUES('". $_POST['lln'] ."','".$_POST['wachtwoord']."')"; //zet het leerlingnummer en het wachtwoord in de database
+		$query = "INSERT INTO Gebruiker(leerlingnummer, wachtwoord) VALUES('". $_POST['lln'] ."','".$_POST['wachtwoord']."')"; //zet het leerlingnummer en het wachtwoord in de database
 		
 		$result = mysql_query( $query );
 		
@@ -12,7 +12,7 @@
 			echo "Er is iets fout gegaan:" . mysql_error();
 			echo "<a href='Registratie.html'>Klik hier om opnieuw te registreren</a>";
 		} else {
-			echo "Je bent succesvol geregistreerd"
+			echo "Je bent succesvol geregistreerd";
 			echo "<a href='Inlogpagina.html'>Klik hier om in te loggen</a>";
 		}
 	//Als de twee wachtwoorden niet hetzelfde zijn, moet je terug naar de registreer pagina

@@ -3,7 +3,7 @@
 	if( isSet( $_POST['lln'] ) && isSet( $_POST['wachtwoord'] ) ){
 		include ("functies.php"); 
 		dbconnect();
-		$query = "SELECT * FROM Gebruikers WHERE leerlingnummer = '" . $_POST['lln'] . "' AND wachtwoord = '" . $_POST['wachtwoord'] . "'"; //Kijk of het leerlingnummer en het wachtwoord in de database staan
+		$query = "SELECT * FROM Gebruiker WHERE leerlingnummer = '" . $_POST['lln'] . "' AND wachtwoord = '" . $_POST['wachtwoord'] . "'"; //Kijk of het leerlingnummer en het wachtwoord in de database staan
 		$result = mysql_query( $query );
 		
 		if ($result == true){ 
