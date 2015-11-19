@@ -21,19 +21,22 @@
 	}else{ //als er niks is ingevuld, moet de inlogpagina opnieuw te voorschijn komen
 		?>
 		<form method="POST" action="login.php"> <!-- als er op de "verwerk" knop wordt gedrukt, ga je naar data.php -->
-			<fieldset>
-				<legend>Inlog pagina</legend> <!-- Titel van de website -->
-				<ol>
-					<li>
-						<label for="lln">Leerlingnummer:</label> <!-- eerste invoerveld -->
-						<input type="text" id="lln" required placeholder="Leerlingnummer"/>
-					</li>
-					<li>
-						<label for="wachtwoord">Wachtwoord:</label> <!-- tweede invoerveld -->
-						<input type="password" id="wachtwoord" required placeholder="Wachtwoord"/>
-					</li>
-				</ol>
-				<input class="knop" type="submit" value="Login"/> <!-- Knop om door te gaan naar login.php -->
+			<div class="legendHolder">
+				<fieldset>
+					<legend>Inloggen</legend> <!-- Titel van de website -->
+					<ul>
+						<li>
+							<label class="gbr" for="lln">Leerlingnummer</label> <!-- eerste invoerveld -->
+							<input type="number" id="lln" required name="lln" "min="100000" max="999999" placeholder="Leerlingnummer"/>
+						</li>
+						<li>
+							<label class="ww" for="Wachtwoord">Wachtwoord</label> <!-- tweede invoerveld -->
+							<input type="password" id="Wachtwoord" required name="wachtwoord" placeholder="Wachtwoord"/>
+						</li>
+					</ul>
+					<input class="btn" type="submit" value="Login"/> <!-- Knop om door te gaan naar login.php -->
+				</fieldset>
+			</div>
 		</form>
 		<?php
 	}
