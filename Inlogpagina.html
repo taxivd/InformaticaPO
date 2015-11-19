@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!doctype html>
 <html>
 	<head>
@@ -5,17 +8,17 @@
 	</head>
 	<body>
 		<!-- Het form element met de action en method attributen -->
-		<form method="post" action="login.php"> <!-- als er op de "verwerk" knop wordt gedrukt, ga je naar data.php -->
+		<form method="POST" action="login.php"> <!-- als er op de "verwerk" knop wordt gedrukt, ga je naar data.php -->
 			<fieldset>
 				<legend>Inlog pagina</legend> <!-- Titel van de website -->
 				<ol>
 					<li>
-						<label for="email">Email:</label> <!-- eerste invoerveld -->
-						<input type="text" id="email" name="email"/>
+						<label for="lln">Leerlingnummer:</label> <!-- eerste invoerveld -->
+						<input type="number" id="lln" required "lln" min="100000" max="999999"/>
 					</li>
 					<li>
 						<label for="wachtwoord">Wachtwoord:</label> <!-- tweede invoerveld -->
-						<input type="password" id="wachtwoord" name="wachtwoord"/>
+						<input type="password" id="wachtwoord" required "Wachtwoord"/>
 					</li>
 				</ol>
 				<input class="knop" type="submit" value="Login"/> <!-- Knop om door te gaan naar login.php -->
