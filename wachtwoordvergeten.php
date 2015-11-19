@@ -3,10 +3,8 @@
 	if( $_POST['wachtwoord'] == $_POST['Controle'] ){
 		include ("functies.php"); //maak verbinding met de database
 		dbconnect();
-		
-		
-		
-		$query = "INSERT INTO Gebruikers(email, wachtwoord) VALUES('". $mail ."','".$_POST['wachtwoord']."')"; //zet het email en het wachtwoord in de database
+				
+		$query = "INSERT INTO Gebruikers(leerlingnummer, wachtwoord) VALUES('". $_POST['lln'] ."','".$_POST['wachtwoord']."')"; //zet het email en het wachtwoord in de database
 		
 		$result = mysql_query( $query );
 		
@@ -21,6 +19,5 @@
 	}else{
 		echo '<p>Je hebt twee verschillende wachtwoorden ingevoerd. Ga terug en probeer het opnieuw</p>';
 		echo "<a href='Registratiepagina.html'>Klik hier om opnieuw te registreren</a>";
-	}
-	
+	}	
 ?>
