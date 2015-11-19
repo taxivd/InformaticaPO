@@ -1,9 +1,11 @@
 <?php
 function registreerLeerling( $naam, $leerlingNummer ){
-	$query = "INSERT INTO Leerling( naam, leerlingNummer) VALUES('" . $naam . "', " . $leerlingNummer . ");";
+	$query = "INSERT INTO Leerling( leerlingNummer, naam, profiel_profiel, toets_id, wachtwoord) VALUES('" . $leerlingNummer . "', " . $naam . ", " . $profiel_profiel . ", " . $toets_id . ", " . $wachtwoord . ");";
+	
+	
 }
-function registreerDocent( $naam, $afkorting ){
-	$query = "INSERT INTO Docent( naam, afkorting) VALUES('" . $naam . "', " . $afkorting . ");";
+function registreerDocent( $afkorting, $naam, $wachtwoord, $docentRol ){
+	$query = "INSERT INTO Docent( afkorting, naam) VALUES('" . $afkorting . "', " . $naam . ", " . $wachtwoord . ", " . $docentRol . ");";
 }
 
 function maakVak( $vakCode, $vakNaam ){
