@@ -13,14 +13,25 @@
 				$_SESSION['login'] = true; //zet de login op true
 				$_SESSION['lln'] = $row['lln']; //zet het leerlingnummer in de rij
 				echo 'Hallo' . $_SESSION['user'];
+				header('Location: home.html');
+				
 			} else { 
 				$_SESSION['login'] = false; //zet de login op false
 				$_SESSION['lln'] = ""; //maak de $_SESSION['lln'] leeg
 			}
 		}
 	}else{ //als er niks is ingevuld, moet de inlogpagina opnieuw te voorschijn komen
-		?>
-		<form method="POST" action="login.php"> <!-- als er op de "verwerk" knop wordt gedrukt, ga je naar data.php -->
+		echo 'Er is iets fout gegaan';
+	}
+
+	if(isset($_SESSION['login']) && $_SESSION['login'] == true ){
+		//je bent ingelogd
+		header('Location: home.html');
+	} else {
+		//je bent niet ingelogd
+		header('Location: Inlogpagina.html');
+	}
+	/*<form method="POST" action="login.php"> <!-- als er op de "verwerk" knop wordt gedrukt, ga je naar data.php -->
 			<div class="legendHolder">
 				<fieldset>
 					<legend>Inloggen</legend> <!-- Titel van de website -->
@@ -38,14 +49,5 @@
 				</fieldset>
 			</div>
 		</form>
-		<?php
-	}
-
-	if(isset($_SESSION['login']) && $_SESSION['login'] == true ){
-		//je bent ingelogd
-		header('Location: home.php');
-	} else {
-		//je bent niet ingelogd
-		header('Location: Inlogpagina.html');
-	}
+		*/
 ?>
