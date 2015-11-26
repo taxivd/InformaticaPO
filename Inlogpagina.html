@@ -17,12 +17,12 @@
 					<legend>Inloggen</legend> <!-- Titel van de website -->
 					<ul>
 						<li>
-							<label class="gbr" for="Gebrnaam">Gebruikersnaam</label>
-							<input type="text" id="Password" name="een" required placeholder="Leerlingnummer" />
+							<label class="gbr" for="lln">Leerlingnummer:</label> <!-- eerste invoerveld -->
+							<input type="number" id="lln" required name="lln" "min="100000" max="999999" placeholder="Leerlingnummer"/>
 						</li>
 						<li>
-							<label class="ww" for="Wachtwoord">Wachtwoord</label>
-							<input type="password" id="Wachtwoord" name="twee" required placeholder="Wachtwoord" />
+							<label class="ww" for="Wachtwoord">Wachtwoord:</label> <!-- tweede invoerveld -->
+							<input type="password" id="Wachtwoord" required name="wachtwoord" placeholder="Wachtwoord"/>
 						</li>
 					</ul>
 					<input class="btn" type="submit" value="Login"/> <!-- Knop om door te gaan naar login.php -->
