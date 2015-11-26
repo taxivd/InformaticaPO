@@ -10,15 +10,15 @@
 		
 		if ($result == false){ //als er een fout wordt gemaakt, kan je terug gaan naar de registratiepagina
 			echo "Er is iets fout gegaan:" . mysql_error();
-			echo "<a href='Registratie.html'><p>Klik hier om opnieuw te registreren</p></a>";
+			header('Location: Registratie.php');
 		} else {
-			echo "Je bent succesvol geregistreerd";
-			echo "<p><a href='Inlogpagina.html'>Klik hier om in te loggen</p></a>";
+			header('Location: Inlogpagina.html');
+			echo 'Je bent succesvol geregistreerd';
 		}
 	//Als de twee wachtwoorden niet hetzelfde zijn, moet je terug naar de registreer pagina
 	}else{
-		echo '<p>Je hebt twee verschillende wachtwoorden ingevoerd. Ga terug en probeer het opnieuw</p>';
-		echo "<a href='Registratie.html'><p>Klik hier om opnieuw te registreren</p></a>";
+		$_GET['message'] = 'Je hebt twee verschillende wachtwoorden ingevoerd.';
+		include( 'Registratie.php' );
 	}
 	
 ?>

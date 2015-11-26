@@ -9,13 +9,14 @@
 		</div>
 		<!-- Het form element met de action en method attributen -->
 		<form method="post" action="registreer.php"> <!-- als er op de "verwerk" knop wordt gedrukt, ga je naar data.php -->
+			<div><? if( isSet( $_GET['message'] ) ){ echo $_GET['message']; } ?></div>
 			<div class="Holder">
 				<fieldset>
 					<legend>Registreren</legend> <!-- Titel van de website -->
 					<ul>
 						<li>
 							<label class="gbr" for="lln">Leerlingnummer</label> <!-- eerste invoerveld -->
-							<input type="number" id="lln" required name="lln" "min="100000" max="999999" placeholder="Leerlingnummer"/>
+							<input type="number" id="lln" required name="lln" min="100000" max="999999" placeholder="Leerlingnummer"/>
 						</li>
 						<li>
 							<label class="ww" for="Wachtwoord">Wachtwoord</label> <!-- tweede invoerveld -->
