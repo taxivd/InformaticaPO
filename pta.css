@@ -1,5 +1,11 @@
 body {
     background-image: url("background.jpg");
+	
+}
+#titel{
+	font-family: Georgia;
+	font-size: 25px;
+	text-align: center;
 }
 .btn {
   background: #3498db;
@@ -17,6 +23,10 @@ body {
   padding: 10px 20px 10px 20px;
   text-decoration: none;
   border: none;
+  
+  position: relative;
+  left: 10px;
+  top: -45px;
 }
 
 .btn:hover {
@@ -30,44 +40,3 @@ body {
   
   box-shadow:         0px 0px 5px 0px rgba(50, 50, 50, 0.75);
 }
-
-ul
-{
-    list-style-type: none;
-	font-family: Georgia;
-	font-size: 15px;
-}  
-#titel{
-	font-family: Georgia;
-	font-size: 25px;
-	text-align: center;
-	
-
-}
-legend{
-	font-family: Georgia;
-	text-align: center;
-	font-size: 18px;
-	
-}
-
-.legendHolder{ 
-    display: block;	
-    padding-top: 0.35em;
-    padding-bottom: 0.625em;
-    padding-left: 0.75em;
-    padding-right: 0.75em;
-    border: 7px groove ;
-	text-align: center;	
-	position: relative;
-    width: 50%;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-label {
-	display: inline-block;
-	width: 8em;
-	text-align: left;
-}
-

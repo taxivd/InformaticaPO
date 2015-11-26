@@ -36,6 +36,7 @@ ul{
 	list-style-type: none;
 	font-family: Georgia;
 	font-size: 15px;
+	
 }
 
 
@@ -44,6 +45,7 @@ ul{
 legend{
 	font-family: Georgia;
 	text-align: center;
+	font-size: 18px;
 	
 	
 	
@@ -63,8 +65,9 @@ legend{
 }
 #titel{
 	font-family: Georgia;
-	font-size: 20px;
+	font-size: 25px;
 	text-align: center;
+	
 }
 
 label {
