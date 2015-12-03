@@ -66,3 +66,4 @@ class Role
 		$sth = $GLOBALS["DB"]->prepare($sql);
 		return $sth->execute(array(":leerlingNummer" => $leerlingNummer));
 }
+}
