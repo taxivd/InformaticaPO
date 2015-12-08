@@ -15,8 +15,8 @@
 					<legend>Registreren</legend> <!-- Titel van de website -->
 					<ul>
 						<li>
-							<label class="gbr" for="lln">Leerlingnummer</label> <!-- eerste invoerveld -->
-							<input type="number" id="lln" required name="lln" min="100000" max="999999" placeholder="Leerlingnummer"/>
+							<label class="gbr" for="lln">Gebruikersnaam</label> <!-- eerste invoerveld -->
+							<input type="text" id="lln" required name="lln" min="100000" max="999999" placeholder="Gebruikersnaam"/>
 						</li>
 						<li>
 							<label class="ww" for="Wachtwoord">Wachtwoord</label> <!-- tweede invoerveld -->
