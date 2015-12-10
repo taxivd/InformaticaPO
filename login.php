@@ -28,7 +28,7 @@
 	
 	if(isset($_SESSION['login']) && $_SESSION['login'] == true ){
 		//je bent ingelogd
-		header('Location: pta.html');
+		header('Location: pta.php');
 	} else{ //als er niks is ingevuld, moet de inlogpagina opnieuw te voorschijn komen
 		echo 'Je hebt een verkeerd wachtwoord ingevoerd, probeer het opnieuw';
 		include( 'Inlogpagina.html' );

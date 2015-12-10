@@ -2,5 +2,6 @@
 	$_SESSION['login'] = false;
 	$_SESSION['lln'] = "";
 	
-	echo "<a href='Inlogpagina.html'> Terug naar de home pagina</a>";
+	echo 'Je bent uitgelogd';
+	include( 'Inlogpagina.html' ); 
 ?>
