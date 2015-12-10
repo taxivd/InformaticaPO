@@ -4,7 +4,7 @@
 		include ("functies.php"); //maak verbinding met de database
 		dbconnect();
 				
-		$query = "INSERT INTO Gebruiker(code, wachtwoord) VALUES('". $_POST['lln'] ."','".$_POST['wachtwoord']."')"; //zet het email en het wachtwoord in de database
+		$query = "INSERT INTO Gebruiker(code, wachtwoord) VALUES('". $_POST['lln'] ."','".$_POST['wachtwoord']."')"; //zet de code en het wachtwoord in de database
 		
 		$result = mysql_query( $query );
 		

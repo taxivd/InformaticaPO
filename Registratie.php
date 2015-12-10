@@ -15,19 +15,19 @@
 					<legend>Registreren</legend> <!-- Titel van de website -->
 					<ul>
 						<li>
-							<label class="gbr" for="lln">Gebruikersnaam</label> <!-- eerste invoerveld -->
-							<input type="text" id="lln" required name="lln" min="100000" max="999999" placeholder="Gebruikersnaam"/>
+							<label class="gbr" for="lln">Gebruikersnaam</label> <!-- eerste invoerveld voor een leerlingnummer of docentcode-->
+							<input type="text" id="lln" required name="lln" placeholder="Gebruikersnaam"/>
 						</li>
 						<li>
-							<label class="ww" for="Wachtwoord">Wachtwoord</label> <!-- tweede invoerveld -->
+							<label class="ww" for="Wachtwoord">Wachtwoord</label> <!-- tweede invoerveld voor een wachtwoord-->
 							<input type="password" id="Wachtwoord" required name="Wachtwoord" placeholder="Wachtwoord"/>
 						</li>
 						<li>
-							<label for="Controle">Herhaal uw wachtwoord</label> <!-- tweede invoerveld -->
+							<label for="Controle">Herhaal uw wachtwoord</label> <!-- derde invoerveld voor het controle wachtwoord -->
 							<input type="password" id="Controle" required name="Controle" placeholder="Wachtwoord"/>
 						</li>
 					</ul>
-					<input class="btn" type="submit" value="Registreer"/> <!-- Knop om door te gaan naar de volgende website -->
+					<input class="btn" type="submit" value="Registreer"/> <!-- Knop om door te gaan naar de inlogpagina website -->
 				</fieldset>
 			</div>
 		</form>

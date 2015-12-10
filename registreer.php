@@ -1,8 +1,6 @@
 <?php
 	//Kijk of het wachtwoord en het controle wachtwoord hetzelfde zijn
-	if( $_POST['Wachtwoord'] == $_POST['Controle']){
-		$lln = (int)$_POST['lln'];
-		
+	if( $_POST['Wachtwoord'] == $_POST['Controle']){		
 		include ("functies.php"); //maak verbinding met de database
 		dbconnect();
 		
