@@ -33,8 +33,6 @@ session_start();
 							echo "<p>" . $toets['RAP'] . "</p>";
 							echo "<p>" . $toets['DTW'] . "</p>";
 							echo "<p>" . $toets['ED'] . "</p>";
-
-
 						}
 					}
 				}

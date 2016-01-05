@@ -26,6 +26,17 @@
 							<label for="Controle">Herhaal uw wachtwoord</label> <!-- derde invoerveld voor het controle wachtwoord -->
 							<input type="password" id="Controle" required name="Controle" placeholder="Wachtwoord"/>
 						</li>
+						<li>
+							<p>Kies hieronder uw vakkenpakket</p>
+							<?php
+								include('Functions Eindproject.php');
+								if( $vakken = vindVakken( ) ){
+								foreach( $vakken as $vak ){
+									echo '<input type="checkbox" name="vak_'. $vak['vakCode'] .'" id="'. $vak['vakCode'] .'" value="'. $vak['vakCode'] .'"/><label for="'. $vak['vakCode'] .'">' . $vak['vakNaam'] . "</label><br />";
+								}
+								}
+							?>
+						</li>
 					</ul>
 					<input class="btn" type="submit" value="Registreer"/> <!-- Knop om door te gaan naar de inlogpagina website -->
 				</fieldset>
